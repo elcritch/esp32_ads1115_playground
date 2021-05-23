@@ -8,13 +8,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(espidflib)
 
-# (Not part of the boilerplate)
-
-set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/common_components/protocol_examples_common)
-# set(EXTRA_COMPONENT_DIRS src)
+set(EXTRA_COMPONENT_DIRS ${espidflib_SOURCE_DIR}/components $ENV{IDF_PATH}/examples/common_components/protocol_examples_common)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(esp32_ads115_playground)
+project(esp32_ads1115_playground)
 
 idf_build_set_property(C_COMPILE_OPTIONS -Wno-error=unused-label APPEND)
 idf_build_set_property(C_COMPILE_OPTIONS -Wno-error=parentheses APPEND)

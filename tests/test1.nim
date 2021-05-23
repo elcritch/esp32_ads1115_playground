@@ -7,6 +7,6 @@
 
 import unittest
 
-import esp32_ads115_playground
+import esp32_ads1115_playground
 test "can add":
   check add(5, 5) == 10

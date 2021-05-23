@@ -6,7 +6,7 @@ import nesper/wifi
 import nesper/tasks
 import os
 
-import esp32_ads115_playground/server
+import esp32_ads1115_playground/server
 
 when defined(ESP32_ETHERNET):
   import setup_eth

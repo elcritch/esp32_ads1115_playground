@@ -1,0 +1,11 @@
+initNvs	initNvs__MuYOO9bzgkDRfMUjRf4ypjw	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/nvs_utils.nim	29	5
+nvs_error	nvs_error	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/nvs_utils.nim	31	6
+msg	msg	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	55	21
+error	error	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	55	34
+=destroy	eqdestroy___9bFJbrj9aRQCH3Cq7aMMwd2g	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+dest	dest	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+=trace	eqtrace___zXMAlK2HRYidyULlN22cww	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+dest	dest	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+env	env	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+=dispose	eqdispose___9bFJbrj9aRQCH3Cq7aMMwd2g_2	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5
+dest	dest	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	56	5

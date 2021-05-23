@@ -1,0 +1,6 @@
+networkConnectEventGroup	networkConnectEventGroup__nmpo6Y9aPj9ceX9a5QPnFjH1Q	/home/elcritch/projects/bessel/mcus/esp32_ads115_playground/main/setup_networking.nim	12	4
+networkIpAddr	networkIpAddr__37g5rmL1egFynkJj9cvRUzQ	/home/elcritch/projects/bessel/mcus/esp32_ads115_playground/main/setup_networking.nim	13	4
+networkConnectionName	networkConnectionName__WyuSNx19cWYWra9bxa5KG0vQ	/home/elcritch/projects/bessel/mcus/esp32_ads115_playground/main/setup_networking.nim	14	4
+networkingStart	networkingStart__dD9aD4KwhdbrSXYXd61wpPw	/home/elcritch/projects/bessel/mcus/esp32_ads115_playground/main/setup_networking.nim	16	5
+part_name	part_name	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/nvs_utils.nim	29	14
+ret	ret	/home/elcritch/projects/bessel/mcus/nesper/src/nesper/general.nim	41	14

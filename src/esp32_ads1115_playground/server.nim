@@ -53,7 +53,7 @@ proc ads111x_read_single*(dev: i2c_dev_ptr, cfg: Ads111xConfig): (float32, int) 
   check: ads111x_set_data_rate(dev, cfg.data_rate) #; // 32 samples per second
   check: ads111x_set_input_mux(dev, cfg.mux) #;    // positive = AIN0, negative = GND
   check: ads111x_set_gain(dev, cfg.gain)
-  check: ads111x_start_conversion(dev)
+  # check: ads111x_start_conversion(dev)
 
   # check: ads111x_set_mode(dev, ADS111X_MODE_SINGLE_SHOT) #    // Continuous conversion mode
   # check: ads111x_set_data_rate(dev, ADS111X_DATA_RATE_32) #; // 32 samples per second
@@ -70,7 +70,7 @@ proc ads111x_read_single*(dev: i2c_dev_ptr, cfg: Ads111xConfig): (float32, int) 
   # TAG.logi("mux: %s", $dch)
 
   # if cfg.mode == ADS111X_MODE_SINGLE_SHOT:
-  check: ads111x_start_conversion(dev)
+  # check: ads111x_start_conversion(dev)
 
   discard dev.measure()
   return dev.measure()
@@ -91,11 +91,11 @@ proc ads111x_test(args: pointer) {.cdecl.} =
     let t0 = newBasicTimer()
 
     let
-      cfg_ch0 = Ads111xConfig(mode: ADS111X_MODE_SINGLE_SHOT,
+      cfg_ch0 = Ads111xConfig(mode: ADS111X_MODE_CONTINUOUS,
                               mux: ADS111X_MUX_0_GND,
                               data_rate: ADS111X_DATA_RATE_32,
                               gain: ADS111X_GAIN_4V096)
-      cfg_ch1 = Ads111xConfig(mode: ADS111X_MODE_SINGLE_SHOT,
+      cfg_ch1 = Ads111xConfig(mode: ADS111X_MODE_CONTINUOUS,
                               mux: ADS111X_MUX_1_GND,
                               data_rate: ADS111X_DATA_RATE_32,
                               gain: ADS111X_GAIN_4V096)
@@ -108,7 +108,7 @@ proc ads111x_test(args: pointer) {.cdecl.} =
 
     while true:
       let
-        adj = (t0.elapsed().uint64 div 1_000_000).uint8 mod 20'u8
+        adj = (t0.elapsed().uint64 div 5_000_000).uint8
         d1 = 60'u8 + adj
       check: dac_output_voltage(DAC_CHANNEL_2, d1)
       TAG.logi("set dac output: %f", float(d1)/256.0 * 3.3)
